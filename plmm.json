@@ -1,0 +1,20 @@
+{
+  "tag": "plmm",
+  "url": "https://www.plmm.com.cn/qingchun",
+  "depth": 5,
+  "type": "file",
+  "downdir": "./plmm/",
+  "header": {
+	"User-Agent": "Mozilla/5.0"
+  },
+  "accept_domain": [
+    "https://www.plmm.com.cn",
+	"https://img.plmm.com.cn"
+  ],
+  "reject_domain": [
+  ],
+  "accept_ext": [
+    ".jpg", ".png"
+  ]
+}
+

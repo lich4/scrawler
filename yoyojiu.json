@@ -1,0 +1,24 @@
+{
+  "tag": "yoyojiu",
+  "url": "https://www.yoyojiu.com/pic",
+  "depth": 5,
+  "type": "file",
+  "downdir": "./yoyojiu/",
+  "header": {
+  },
+  "accept_domain": [
+    "https://www.yoyojiu.com/pic",
+    "https://www.yoyojiu.com/xgmn",
+    "https://www.yoyojiu.com/qcmn",
+    "https://www.yoyojiu.com/qtmn",
+    "https://www.yoyojiu.com/swmn",
+    "https://file.yoyojiu.com"
+  ],
+  "reject_domain": [
+    "https://file.yoyojiu.com/thumb"
+  ],
+  "accept_ext": [
+    ".jpg", ".png"
+  ]
+}
+

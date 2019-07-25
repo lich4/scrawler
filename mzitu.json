@@ -1,0 +1,19 @@
+{
+  "tag": "mzitu",
+  "url": "https://www.mzitu.com",
+  "depth": 5,
+  "type": "file",
+  "downdir": "./mzitu/",
+  "header": {
+	"User-Agent": "Mozilla/5.0"
+  },
+  "accept_domain": [
+    "https://www.mzitu.com"
+  ],
+  "reject_domain": [
+  ],
+  "accept_ext": [
+    ".jpg", ".png"
+  ]
+}
+

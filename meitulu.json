@@ -1,0 +1,20 @@
+{
+  "tag": "meitulu",
+  "url": "https://www.meitulu.com",
+  "depth": 5,
+  "type": "file",
+  "downdir": "./meitulu/",
+  "header": {
+	"User-Agent": "Mozilla/5.0"
+  },
+  "accept_domain": [
+    "https://www.meitulu.com",
+	"https://mtl.ttsqgs.com"
+  ],
+  "reject_domain": [
+  ],
+  "accept_ext": [
+    ".jpg", ".png"
+  ]
+}
+

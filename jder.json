@@ -1,0 +1,22 @@
+{
+  "tag": "jder",
+  "url": "http://www.jder.net/meizi",
+  "depth": 5,
+  "type": "file",
+  "downdir": "./jder/",
+  "header": {
+  },
+  "accept_domain": [
+    "www.jder.net/meizi",
+    "www.jder.net/qc",
+    "www.jder.net/cm",
+    "www.jder.net/mx",
+	"img.jder.net"
+  ],
+  "reject_domain": [
+  ],
+  "accept_ext": [
+    ".jpg", ".png"
+  ]
+}
+

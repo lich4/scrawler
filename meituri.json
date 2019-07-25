@@ -1,0 +1,20 @@
+{
+  "tag": "meituri",
+  "url": "https://www.meituri.com",
+  "depth": 5,
+  "type": "file",
+  "downdir": "./meituri/",
+  "header": {
+	"User-Agent": "Mozilla/5.0"
+  },
+  "accept_domain": [
+    "https://www.meituri.com",
+	"https://ii.hywly.com"
+  ],
+  "reject_domain": [
+  ],
+  "accept_ext": [
+    ".jpg", ".png"
+  ]
+}
+
