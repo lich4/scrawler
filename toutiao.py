@@ -154,10 +154,12 @@ def gethotkeyword(s):
     starttime = time.strftime("%Y-%m-%d", time.localtime(time.time() - 3600 * 24 * 3))
     totaltrends = 0
     for ss in set(jieba.lcut(s)):
-        if len(ss) < 2 or ss.isalnum():
+        if len(ss) < 2:
             continue
-        if type(u'宝直接') == unicode:
+        if type(ss) == unicode:
             ss = ss.encode('utf8')
+        if ss.isalnum():
+            continue
         uss = unicode(ss, "utf8")
         url = 'https://mlab.toutiao.com/api/keyword/detail_hot_index?rid=0&cid=0&keyword=%s&start=%s&end=%s'
         try:
