@@ -154,7 +154,7 @@ def gethotkeyword(s):
     starttime = time.strftime("%Y-%m-%d", time.localtime(time.time() - 3600 * 24 * 3))
     totaltrends = 0
     for ss in set(jieba.lcut(s)):
-        if len(ss) < 2:
+        if len(ss) < 2 or ss.isalnum():
             continue
         if type(u'宝直接') == unicode:
             ss = ss.encode('utf8')
