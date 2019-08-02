@@ -135,11 +135,11 @@ def gethotissues():
         try:
             code, data = httpRequest(urlhot % (starttime, endtime, item['id']), headers=headers)
             issue = json.loads(data)['hot_issues'][0]
-            if issue['score']/10000 > 0:
+            if issue['score']/10000 > 1:
                 print(item['name'] + u"热门事件(%dW):" % (issue['score']/10000) + u' '.join(issue['keywords']))
             code, data = httpRequest(urlrise % (starttime, endtime, item['id']), headers=headers)
             issue = json.loads(data)['issues_rise'][0]
-            if issue['score']/10000 > 0:
+            if issue['score']/10000 > 1:
                 print(item['name'] + u"上升事件(%dW):" % (issue['score']/10000) + u' '.join(issue['keywords']))
         except Exception as e:
             pass
@@ -153,7 +153,7 @@ def gethotkeyword(s):
     endtime = time.strftime("%Y-%m-%d", time.localtime(time.time()))
     starttime = time.strftime("%Y-%m-%d", time.localtime(time.time() - 3600 * 24 * 3))
     totaltrends = 0
-    for ss in jieba.lcut(s):
+    for ss in set(jieba.lcut(s)):
         if len(ss) < 2:
             continue
         if type(u'宝直接') == unicode:
@@ -161,10 +161,11 @@ def gethotkeyword(s):
         uss = unicode(ss, "utf8")
         url = 'https://mlab.toutiao.com/api/keyword/detail_hot_index?rid=0&cid=0&keyword=%s&start=%s&end=%s'
         try:
-        code, data = httpRequest(url % (urllib_.quote(ss), starttime, endtime), headers=headers)
-        trends = json.loads(data)['trends'][uss]
-        print(uss + "=%dW" % (trends[0]/10000))
-        totaltrends += int(trends[0]/10000)
+            code, data = httpRequest(url % (urllib_.quote(ss), starttime, endtime), headers=headers)
+            trends = json.loads(data)['trends'][uss]
+            if trends[0]/10000 > 1:
+                print(uss + "=%dW" % (trends[0]/10000))
+                totaltrends += int(trends[0]/10000)
         except Exception as e:
             pass
     print('total trends=%dW' % totaltrends)
